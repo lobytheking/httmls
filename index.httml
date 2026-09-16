@@ -3,299 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بوت الكردت الاحترافي - الصفحة الرسمية</title>
+    <title>مساعد بوت الكردت</title>
     <style>
-        * {
-            box-sizing: border-box;
+        body {
+            font-family: Tahoma, sans-serif;
+            background-color: #0b0f19;
+            color: #ffffff;
             margin: 0;
             padding: 0;
         }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #06080f;
-            color: #ffffff;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* إضاءة خلفية فخمة */
-        .glow-bg {
-            position: absolute;
-            top: -100px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 350px;
-            background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(11, 15, 25, 0) 70%);
-            z-index: -1;
-            filter: blur(60px);
-        }
-
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 50px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            background: rgba(6, 8, 15, 0.8);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            padding: 20px 30px;
+            border-bottom: 1px solid #1f2937;
         }
         .logo-badge {
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: #06080f;
-            font-weight: 800;
-            padding: 8px 14px;
-            border-radius: 10px;
+            background-color: #10b981;
+            color: #0b0f19;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 8px;
             font-size: 14px;
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
         }
         .nav-title {
-            font-size: 17px;
-            color: #f3f4f6;
+            font-size: 16px;
+            color: #e5e7eb;
             font-weight: 600;
-            letter-spacing: 0.5px;
         }
         .menu-icon {
-            font-size: 24px;
+            font-size: 22px;
             cursor: pointer;
-            color: #9ca3af;
-            transition: color 0.3s;
+            color: #e5e7eb;
         }
-        .menu-icon:hover {
-            color: #fff;
-        }
-
         .hero {
-            max-width: 900px;
-            margin: 80px auto;
-            padding: 0 25px;
-            text-align: right;
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
         }
-        
-        .hero-tag {
-            display: inline-block;
-            background: rgba(16, 185, 129, 0.1);
-            color: #34d399;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            border: 1px solid rgba(16, 185, 129, 0.2);
-            margin-bottom: 25px;
-        }
-
         h1 {
-            font-size: 48px;
-            line-height: 1.25;
-            margin-bottom: 25px;
+            font-size: 42px;
+            line-height: 1.3;
+            margin-bottom: 20px;
             font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(180deg, #ffffff 0%, #9ca3af 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
-
         .description {
             color: #9ca3af;
-            font-size: 19px;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            max-width: 750px;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 35px;
         }
-
         .buttons-container {
             display: flex;
-            gap: 18px;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .btn-green {
+            background-color: #84cc16;
+            color: #0b0f19;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .btn-green:hover {
+            background-color: #65a30d;
+        }
+        .btn-dark {
+            background-color: #1f2937;
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            border: 1px solid #374151;
+            transition: 0.3s;
+        }
+        .btn-dark:hover {
+            background-color: #374151;
+        }
+        .features-tags {
+            display: flex;
+            gap: 20px;
+            color: #9ca3af;
+            font-size: 14px;
             margin-bottom: 50px;
             flex-wrap: wrap;
         }
-
-        .btn-green {
-            background: linear-gradient(135deg, #22c55e, #16a34a);
-            color: #06080f;
-            padding: 16px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .btn-green:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(34, 197, 94, 0.4);
-            background: linear-gradient(135deg, #16a34a, #15803d);
-        }
-
-        .btn-dark {
-            background: rgba(255, 255, 255, 0.03);
-            color: #ffffff;
-            padding: 16px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        .btn-dark:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            margin-bottom: 60px;
-        }
-        .feature-card {
-            background: rgba(18, 24, 38, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 24px;
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(16, 185, 129, 0.3);
-        }
-        .feature-icon {
-            font-size: 24px;
-            margin-bottom: 12px;
-        }
-        .feature-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: #f3f4f6;
-            margin-bottom: 8px;
-        }
-        .feature-desc {
-            font-size: 14px;
-            color: #9ca3af;
-            line-height: 1.6;
-        }
-
         .divider {
             border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            margin: 60px 0;
-        }
-
-        .section-box {
-            background: linear-gradient(180deg, rgba(18, 24, 38, 0.4) 0%, rgba(11, 15, 25, 0.4) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 40px;
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
+            border-top: 1px solid #1f2937;
+            margin: 40px 0;
         }
         .section-label {
-            color: #34d399;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 12px;
+            color: #84cc16;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
         .section-title {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
-            margin-bottom: 16px;
-            color: #ffffff;
+            margin-bottom: 15px;
         }
         .section-desc {
             color: #9ca3af;
             font-size: 16px;
-            line-height: 1.8;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 34px; }
-            header { padding: 20px; }
-            .hero { margin: 40px auto; }
-            .section-box { padding: 25px; }
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
-    <div class="glow-bg"></div>
-
-    <!-- شريط التنقل العلوي -->
+    <!-- شريط التنصت العلوي -->
     <header>
-        <div class="logo-container">
-            <span class="logo-badge">CREDIT</span>
-            <span class="nav-title">بوت الكردت</span>
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <span class="logo-badge">BOT</span>
+            <span class="nav-title">مساعد بوت الكردت</span>
         </div>
         <div class="menu-icon">☰</div>
     </header>
 
     <!-- القسم الرئيسي -->
     <main class="hero">
-        <div class="hero-tag">✨ النظام الاقتصادي الأقوى لسيرفرك</div>
-        
-        <h1>أضف القوة والأمان المالي لسيرفرك مع بوت الكردت المتطور</h1>
+        <h1>بوت الكردت الخاص بك، لإدارة أموالك بكل سهولة.</h1>
         
         <p class="description">
-            تحويلات فورية سريعة، متجر افتراضي متكامل، حماية قصوى للأرصدة، وتحكم كامل بكل العمليات الاقتصادية بدقة وموثوقية عالية.
+            تحويلات الأرصدة، إدارة المتجر الافتراضي، متابعة الألعاب والمسابقات، والحصول على تحكم كامل 
+            وأمان عالي من بوت كردت متطور ومخصص لسيرفرك.
         </p>
 
         <!-- الأزرار المطلوبة -->
         <div class="buttons-container">
-            <a href="رابط_معلومات_البوت" class="btn-green">
-                معلومات البوت 
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+            <a href="رابط_معلومات_البوت" class="btn-green">معلومات البوت ←</a>
             <a href="رابط_دعوة_البوت" class="btn-dark">دعوة البوت</a>
         </div>
 
-        <!-- ميزات سريعة كبطاقات -->
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">⚡</div>
-                <div class="feature-title">أداء فائق السرعة</div>
-                <div class="feature-desc">استجابة فورية لكافة الأوامر والتحويلات المالية بدون أي تأخير.</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔒</div>
-                <div class="feature-title">حماية وأمان تام</div>
-                <div class="feature-desc">نظام حماية متطور يمنع الثغرات ويحافظ على أرصدة المستخدمين بأمان.</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">💎</div>
-                <div class="feature-title">متجر افتراضي تفاعلي</div>
-                <div class="feature-desc">أقسام متكاملة لبيع وشراء الرتب والصلاحيات بكل سهولة ومرونة.</div>
-            </div>
+        <!-- معلومات سريعة -->
+        <div class="features-tags">
+            <span>⚡ تحويلات فورية</span>
+            <span>•</span>
+            <span>🔒 أمان عالي وحماية تامة للأرصدة</span>
+            <span>•</span>
+            <span>💎 متجر تفاعلي</span>
         </div>
 
         <hr class="divider">
 
-        <!-- قسم ما يفعله الفخم -->
-        <div class="section-box">
-            <div class="section-label">ما يفعله النظام</div>
-            <div class="section-title">مصمم خصيصاً لإدارة اقتصاد السيرفر باحترافية</div>
+        <!-- قسم ما يفعله -->
+        <div>
+            <div class="section-label">ما يفعله</div>
+            <div class="section-title">مصمم لإدارة اقتصاد سيرفرك باحترافية</div>
             <p class="section-desc">
-                ليس مجرد بوت تقليدي، بل هو مساعد مالي ذكي يتولى تنظيم عمليات البيع والشراء، توزيع الرواتب والأرباح تلقائياً، 
-                وتسجيل كافة المعاملات في السجلات بدقة متناهية، ليمنح مجتمعك تجربة اقتصادية متكاملة وممتعة.
+                ليس مجرد بوت عادي. امنحه صلاحيات الإدارة، وسيقوم بتنظيم عمليات البيع والشراء، 
+                منح الرواتب اليومية، وتسجيل كافة المعاملات المالية بدقة متناهية وبدون أخطاء.
             </p>
         </div>
     </main>
 
 </body>
 </html>
-            
