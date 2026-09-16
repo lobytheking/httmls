@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مساعد بوت الكردت</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            background-color: #0b0f19;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 1px solid #1f2937;
+        }
+        .logo-badge {
+            background-color: #10b981;
+            color: #0b0f19;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .nav-title {
+            font-size: 16px;
+            color: #e5e7eb;
+            font-weight: 600;
+        }
+        .menu-icon {
+            font-size: 22px;
+            cursor: pointer;
+            color: #e5e7eb;
+        }
+        .hero {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            font-size: 42px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .description {
+            color: #9ca3af;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+        .buttons-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .btn-green {
+            background-color: #84cc16;
+            color: #0b0f19;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .btn-green:hover {
+            background-color: #65a30d;
+        }
+        .btn-dark {
+            background-color: #1f2937;
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            border: 1px solid #374151;
+            transition: 0.3s;
+        }
+        .btn-dark:hover {
+            background-color: #374151;
+        }
+        .features-tags {
+            display: flex;
+            gap: 20px;
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        .divider {
+            border: none;
+            border-top: 1px solid #1f2937;
+            margin: 40px 0;
+        }
+        .section-label {
+            color: #84cc16;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .section-desc {
+            color: #9ca3af;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شريط التنصت العلوي -->
+    <header>
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <span class="logo-badge">BOT</span>
+            <span class="nav-title">مساعد بوت الكردت</span>
+        </div>
+        <div class="menu-icon">☰</div>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <main class="hero">
+        <h1>بوت الكردت الخاص بك، لإدارة أموالك بكل سهولة.</h1>
+        
+        <p class="description">
+            تحويلات الأرصدة، إدارة المتجر الافتراضي، متابعة الألعاب والمسابقات، والحصول على تحكم كامل 
+            وأمان عالي من بوت كردت متطور ومخصص لسيرفرك.
+        </p>
+
+        <!-- الأزرار المطلوبة -->
+        <div class="buttons-container">
+            <a href="رابط_معلومات_البوت" class="btn-green">معلومات البوت ←</a>
+            <a href="رابط_دعوة_البوت" class="btn-dark">دعوة البوت</a>
+        </div>
+
+        <!-- معلومات سريعة -->
+        <div class="features-tags">
+            <span>⚡ تحويلات فورية</span>
+            <span>•</span>
+            <span>🔒 أمان عالي وحماية تامة للأرصدة</span>
+            <span>•</span>
+            <span>💎 متجر تفاعلي</span>
+        </div>
+
+        <hr class="divider">
+
+        <!-- قسم ما يفعله -->
+        <div>
+            <div class="section-label">ما يفعله</div>
+            <div class="section-title">مصمم لإدارة اقتصاد سيرفرك باحترافية</div>
+            <p class="section-desc">
+                ليس مجرد بوت عادي. امنحه صلاحيات الإدارة، وسيقوم بتنظيم عمليات البيع والشراء، 
+                منح الرواتب اليومية، وتسجيل كافة المعاملات المالية بدقة متناهية وبدون أخطاء.
+            </p>
+        </div>
+    </main>
+
+</body>
+</html>
